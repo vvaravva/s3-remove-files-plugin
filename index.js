@@ -37,7 +37,7 @@ class S3RemoveFilesPlugin {
 
     prepareData(compilation) {
         this.data.Contents.forEach(({ Key }) => {
-            if (this.reg(compilation).test(Key)) return;
+            if (this.reg(compilation).test(Key) || !this.options.test.test(Key)) return;
             this.params.Delete.Objects.push({ Key });
         });
     }
