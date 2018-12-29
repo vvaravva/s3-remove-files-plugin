@@ -39,7 +39,7 @@ class S3RemoveFilesPlugin {
             this.params.Delete.Objects.push({ Key });
         });
 
-        await this.s3.deleteObjects(params).promise();
+        await this.s3.deleteObjects(this.params).promise();
 
         if (listedObjects.IsTruncated) await this.removeFiles();
     }
