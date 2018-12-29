@@ -30,8 +30,8 @@ module.exports = {
                 Bucket: process.env.S3_BUCKET,
                 Prefix: process.env.S3_BASE_PATH + 'assets'
             },
+            include: /\.(js|css|gz)/,
             var: 'BUILD_NUMBER', // variable name
-            test: /\.(js|css|gz)/,
             count: 5 // number of builds to save
         })
     ]
