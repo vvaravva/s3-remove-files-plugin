@@ -1,5 +1,3 @@
-# NOT READY!
-
 # S3 Remove Files Plugin
 
 Webpack plugin for remove files from s3.
